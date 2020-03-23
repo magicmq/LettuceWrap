@@ -1,4 +1,4 @@
 name: LettuceWrap
-version: 1.2
+version: @VERSION@
 author: magicmq
 main: com.github.magicmq.lettucewrap.LettuceWrap

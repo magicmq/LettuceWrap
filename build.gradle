@@ -21,9 +21,18 @@ dependencies {
     compile 'io.lettuce:lettuce-core:5.2.2.RELEASE'
 }
 
+import org.apache.tools.ant.filters.ReplaceTokens;
+
+processResources {
+    from (sourceSets.main.resources) {
+        include 'plugin.yml'
+        filter(ReplaceTokens, tokens: ['VERSION' : project.version])
+    }
+}
+
 shadowJar {
     baseName = 'LettuceWrap'
-    version = '1.2'
+    version = project.version
 }
 
 
