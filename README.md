@@ -19,26 +19,24 @@ Add the following repository:
 ```
 Then, add the following dependency:
 ``` maven
-  <dependency>
+	<dependency>
 	    <groupId>com.github.magicmq</groupId>
 	    <artifactId>LettuceWrap</artifactId>
-	    <version>1.0</version>
+	    <version>1.1</version>
 	</dependency>
 ```
 ### Gradle
 Add the following repository:
 ``` groovy
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
 ```
 Then, add the following dependency:
 ``` groovy
 	dependencies {
-	        implementation 'com.github.magicmq:LettuceWrap:1.0'
+	        implementation 'com.github.magicmq:LettuceWrap:1.1'
 	}
 ```
 
@@ -57,9 +55,12 @@ To deregister/remove a listener, run the following code:
 ``` java
 client.removeListener(channelname);
 ```
-
 To publish a message to a channel, run the following code:
 ``` java
 client.sendMessage(channelname, message);
+```
+To deregister an entire client, run the following code:
+``` java
+LettuceWrap.get().deregisterClient(client);
 ```
 JavaDocs is provided for each API method.
