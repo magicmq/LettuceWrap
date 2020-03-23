@@ -1,0 +1,4 @@
+name: RedisAPI
+version: 1.0
+author: magicmq
+main: com.clubobsidian.lettucewrap.LettuceWrap
