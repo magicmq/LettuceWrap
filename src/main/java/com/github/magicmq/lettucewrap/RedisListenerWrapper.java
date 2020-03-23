@@ -1,4 +1,4 @@
-package com.clubobsidian.lettucewrap;
+package com.github.magicmq.lettucewrap;
 
 import io.lettuce.core.pubsub.RedisPubSubListener;
 

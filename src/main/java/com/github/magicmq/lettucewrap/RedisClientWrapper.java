@@ -1,4 +1,4 @@
-package com.clubobsidian.lettucewrap;
+package com.github.magicmq.lettucewrap;
 
 import com.google.common.collect.Maps;
 import io.lettuce.core.RedisClient;

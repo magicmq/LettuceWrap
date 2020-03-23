@@ -1,4 +1,4 @@
-package com.clubobsidian.lettucewrap;
+package com.github.magicmq.lettucewrap;
 
 import com.google.common.collect.Lists;
 import org.bukkit.plugin.java.JavaPlugin;
