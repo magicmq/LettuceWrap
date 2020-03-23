@@ -19,7 +19,7 @@ Add the following repository:
 ```
 Then, add the following dependency:
 ``` maven
-  <dependency>
+	<dependency>
 	    <groupId>com.github.magicmq</groupId>
 	    <artifactId>LettuceWrap</artifactId>
 	    <version>1.1</version>
