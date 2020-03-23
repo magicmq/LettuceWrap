@@ -1,4 +1,4 @@
-name: RedisAPI
+name: LettuceWrap
 version: 1.1
 author: magicmq
 main: com.github.magicmq.lettucewrap.LettuceWrap

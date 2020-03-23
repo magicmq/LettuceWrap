@@ -17,6 +17,7 @@
 package com.github.magicmq.lettucewrap;
 
 import com.google.common.collect.Maps;
+import io.lettuce.core.ClientOptions;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.pubsub.StatefulRedisPubSubConnection;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -38,6 +39,10 @@ public class RedisClientWrapper {
         try {
             client = RedisClient.create("redis://" + URLEncoder.encode(password, "UTF-8") + "@" + ip + ":" + port + "/0");
         } catch (UnsupportedEncodingException ignored) {}
+        client.setOptions(ClientOptions.builder()
+                .autoReconnect(true)
+                .pingBeforeActivateConnection(true)
+                .build());
         connectionincoming = client.connectPubSub();
         connectionoutgoing = client.connectPubSub();
         listeners = Maps.newHashMap();
