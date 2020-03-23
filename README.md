@@ -28,11 +28,9 @@ Then, add the following dependency:
 ### Gradle
 Add the following repository:
 ``` groovy
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
 ```
 Then, add the following dependency:
