@@ -57,9 +57,12 @@ To deregister/remove a listener, run the following code:
 ``` java
 client.removeListener(channelname);
 ```
-
 To publish a message to a channel, run the following code:
 ``` java
 client.sendMessage(channelname, message);
+```
+To deregister an entire client, run the following code:
+``` java
+LettuceWrap.get().deregisterClient(client);
 ```
 JavaDocs is provided for each API method.
