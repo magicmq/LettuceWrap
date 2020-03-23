@@ -22,9 +22,10 @@ Then, add the following dependency:
 	<dependency>
 	    <groupId>com.github.magicmq</groupId>
 	    <artifactId>LettuceWrap</artifactId>
-	    <version>1.1</version>
+	    <version>{VERSION}</version>
 	</dependency>
 ```
+Replace `{VERSION}` with the version that JitPack shows above.
 ### Gradle
 Add the following repository:
 ``` groovy
@@ -36,9 +37,10 @@ Add the following repository:
 Then, add the following dependency:
 ``` groovy
 	dependencies {
-	        implementation 'com.github.magicmq:LettuceWrap:1.1'
+	        implementation 'com.github.magicmq:LettuceWrap:{VERSION}'
 	}
 ```
+Replace `{VERSION}` with the version that JitPack shows above.
 
 ## Usage
 With LettuceWrap, listeners are created individually per channel that you need to use. To create the client and add listeners, run the following code:
