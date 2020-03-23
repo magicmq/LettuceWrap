@@ -22,7 +22,7 @@ Then, add the following dependency:
   <dependency>
 	    <groupId>com.github.magicmq</groupId>
 	    <artifactId>LettuceWrap</artifactId>
-	    <version>1.0</version>
+	    <version>1.1</version>
 	</dependency>
 ```
 ### Gradle
@@ -38,7 +38,7 @@ Add the following repository:
 Then, add the following dependency:
 ``` groovy
 	dependencies {
-	        implementation 'com.github.magicmq:LettuceWrap:1.0'
+	        implementation 'com.github.magicmq:LettuceWrap:1.1'
 	}
 ```
 
