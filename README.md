@@ -55,7 +55,7 @@ client.addListener(new RedisListenerWrapper(channelname) {
 ```
 To deregister/remove a listener, run the following code:
 ``` java
-client.removeListener(channelName());
+client.removeListener(channelname);
 ```
 
 To publish a message to a channel, run the following code:
