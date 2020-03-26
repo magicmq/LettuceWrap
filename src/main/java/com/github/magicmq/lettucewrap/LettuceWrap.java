@@ -17,6 +17,7 @@
 package com.github.magicmq.lettucewrap;
 
 import com.google.common.collect.Lists;
+import io.lettuce.core.RedisException;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.List;
@@ -63,7 +64,9 @@ public class LettuceWrap extends JavaPlugin {
      */
     public void deregisterClient(RedisClientWrapper client) {
         registeredclients.remove(client);
-        client.deregister();
+        try {
+            client.deregister();
+        } catch (RedisException ignored) {}
     }
 
     /**
