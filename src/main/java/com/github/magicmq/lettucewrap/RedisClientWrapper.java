@@ -81,7 +81,7 @@ public class RedisClientWrapper {
         connectionoutgoing.async().publish(channel, message);
     }
 
-    void deregister() {
+    protected void deregister() {
         connectionincoming.close();
         connectionoutgoing.close();
         client.shutdown();

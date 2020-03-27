@@ -40,21 +40,31 @@ public abstract class RedisListenerWrapper implements RedisPubSubListener<String
     public abstract void messageReceived(String message);
 
     @Override
-    public void message(String pattern, String channel, String message) {}
+    public void message(String pattern, String channel, String message) {
+        //Should be empty
+    }
 
     @Override
-    public void subscribed(String channel, long count) {}
+    public void subscribed(String channel, long count) {
+        //Should be empty
+    }
 
     @Override
-    public void psubscribed(String pattern, long count) {}
+    public void psubscribed(String pattern, long count) {
+        //Should be empty
+    }
 
     @Override
-    public void unsubscribed(String channel, long count) {}
+    public void unsubscribed(String channel, long count) {
+        //Should be empty
+    }
 
     @Override
-    public void punsubscribed(String pattern, long count) {}
+    public void punsubscribed(String pattern, long count) {
+        //Should be empty
+    }
 
-    String getChannel() {
+    protected String getChannel() {
         return channel;
     }
 }
