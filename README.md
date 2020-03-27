@@ -1,4 +1,5 @@
 # LettuceWrap
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bddfaf15df234538bab532806a8f1843)](https://app.codacy.com/manual/magicmq/LettuceWrap?utm_source=github.com&utm_medium=referral&utm_content=magicmq/LettuceWrap&utm_campaign=Badge_Grade_Dashboard)
 [![](https://jitpack.io/v/magicmq/LettuceWrap.svg)](https://jitpack.io/#magicmq/LettuceWrap)
 
 A lightweight Bukkit plugin designed to make utilizing PubSub messaging from lettuce.io clean and easy. For more information, see [lettuce.io](http://lettuce.io). This plugin is only designed to subscribe (listen) to channels and publish messages to channels. Patterns and listening for subscribing/unsubscribing is NOT supported.
