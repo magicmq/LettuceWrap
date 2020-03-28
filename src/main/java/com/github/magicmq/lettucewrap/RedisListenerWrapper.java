@@ -17,10 +17,13 @@
 package com.github.magicmq.lettucewrap;
 
 import io.lettuce.core.pubsub.RedisPubSubListener;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public abstract class RedisListenerWrapper implements RedisPubSubListener<String, String> {
 
     private String channel;
+    private JavaPlugin owner;
 
     public RedisListenerWrapper(String channel) {
         this.channel = channel;
@@ -29,7 +32,7 @@ public abstract class RedisListenerWrapper implements RedisPubSubListener<String
     @Override
     public void message(String channel, String message) {
         if (this.channel.equals(channel)) {
-            messageReceived(message);
+            Bukkit.getScheduler().runTask(owner, () -> messageReceived(message));
         }
     }
 
@@ -62,6 +65,10 @@ public abstract class RedisListenerWrapper implements RedisPubSubListener<String
     @Override
     public void punsubscribed(String pattern, long count) {
         //Should be empty
+    }
+
+    protected void setOwner(JavaPlugin owner) {
+        this.owner = owner;
     }
 
     protected String getChannel() {

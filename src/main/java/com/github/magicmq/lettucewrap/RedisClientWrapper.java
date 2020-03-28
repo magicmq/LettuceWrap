@@ -53,6 +53,7 @@ public class RedisClientWrapper {
      * @param listener A RedisListenerWrapper that represents what will be called when a message is received from its channel.
      */
     public void addListener(RedisListenerWrapper listener) {
+        listener.setOwner(owner);
         listeners.put(listener.getChannel(), listener);
         connectionincoming.addListener(listener);
         connectionincoming.sync().subscribe(listener.getChannel());
