@@ -67,3 +67,7 @@ To deregister an entire client, run the following code:
 LettuceWrap.get().deregisterClient(client);
 ```
 JavaDocs is provided for each API method.
+
+##Caveats
+* Do **NOT** reload LettuceWrap with PlugMan! All plugins that utilize this API will break if you do this.
+* If you plan to use PlugMan to reload, enable, or disable your plugin without restarting the server, you **MUST** deregister the client in your plugin's ```onDisable()``` method. See the usage section above for how to do this.
