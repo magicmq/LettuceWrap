@@ -25,6 +25,10 @@ public abstract class RedisListenerWrapper implements RedisPubSubListener<String
     private String channel;
     private JavaPlugin owner;
 
+    /**
+     * This class represents a listener. When a message is received on the channel specified, the message will be called via the messageReceived method.
+     * @param channel The name of the channel that should be registered
+     */
     public RedisListenerWrapper(String channel) {
         this.channel = channel;
     }
